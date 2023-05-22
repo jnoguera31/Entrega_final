@@ -1,0 +1,20 @@
+nav {
+  border-bottom: 1px solid #cacaca;
+  display: grid;
+  grid-template-columns: 102px 300px;
+}
+nav .buton {
+  display: flex;
+}
+nav .buton .logout {
+  margin-left: 5%;
+}
+nav .buton .logout button {
+  font-weight: bold;
+}
+nav .buton .agregarP {
+  margin-left: 18%;
+}
+nav .buton .agregarP button {
+  font-weight: bold;
+}/*# sourceMappingURL=userheader.component.css.map */

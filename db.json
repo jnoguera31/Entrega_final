@@ -1,0 +1,25 @@
+{
+  "proyecto": [
+    {
+      "titulo": "hola",
+      "descripcion": "como ta",
+      "id": 1
+    }
+  ],
+  "comentarios": [],
+  "items": [
+    {
+      "introduccion": "juan nlse",
+      "id": 1
+    },
+    {
+      "introduccion": "gordito",
+      "id": 2
+    },
+    {
+      "introduccion": "mañana no hay clase",
+      "id": 3
+    }
+  ],
+  "user": []
+}

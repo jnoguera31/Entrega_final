@@ -1,0 +1,25 @@
+nav {
+  border-bottom: 1px solid #cacaca;
+  display: grid;
+  grid-template-columns: 102px 300px;
+}
+nav .buton {
+  display: flex;
+}
+nav .buton .logout {
+  margin-left: 50%;
+}
+nav .buton .logout button {
+  font-weight: bold;
+}
+
+form {
+  margin-top: 5%;
+}
+form .container button {
+  margin-top: 3%;
+}
+
+h1 {
+  text-align: center;
+}/*# sourceMappingURL=rproyecto.component.css.map */
