@@ -35,7 +35,7 @@ import { MainComponent } from './modules/user/main/main.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
    
  
   ],

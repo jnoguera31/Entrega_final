@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -19,7 +19,7 @@ export class LoginComponent {
   errorMessage!: string;
 
   constructor(private http: HttpClient,
-    private route: Router) { }
+    private route: Router,  private ngZone: NgZone) { }
 
   login(): void {
     this.http.get<User[]>('http://localhost:3000/users').subscribe(users => {
@@ -34,7 +34,11 @@ export class LoginComponent {
         // Credenciales inválidas, muestra un mensaje de error
         console.log('Credenciales inválidas');
         this.errorMessage = 'Credenciales inválidas';
-        
+        this.ngZone.run(() => {
+          window.alert('Credenciales inválidas');
+          this.username = ''; // Dejar en blanco el campo de nombre de usuario
+          this.password = ''; // Dejar en blanco el campo de contraseña
+        });
       }
     });
   }
