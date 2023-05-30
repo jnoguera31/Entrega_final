@@ -1,5 +1,4 @@
-import { UsercolumComponent } from './modules/user/usercolum/usercolum.component';
-import { UsereditorComponent } from './modules/user/usereditor/usereditor.component';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -10,6 +9,7 @@ import { UserheaderComponent } from './modules/user/userheader/userheader.compon
 import { UserfooterComponent } from './modules/user/userfooter/userfooter.component';
 import { RproyectoComponent } from './modules/user/rproyecto/rproyecto.component';
 import { FormsModule } from '@angular/forms';
+import { MainComponent } from './modules/user/main/main.component';
 
 
 
@@ -20,9 +20,8 @@ import { FormsModule } from '@angular/forms';
     UserComponent,
     UserheaderComponent,
     UserfooterComponent,
-    UsereditorComponent,
-    UsercolumComponent,
-    RproyectoComponent
+    RproyectoComponent,
+    MainComponent
    
    
 

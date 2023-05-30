@@ -1,11 +1,13 @@
-<form>
-    <div class="mb-3">
-      <input type="email" class="form-control" placeholder="Usuario" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+<div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+<div class="formulario">
+  <div class="mb-3">
+      <input type="text" class="form-control" placeholder="Usuario" id="username" [(ngModel)]="username">
       <div id="emailHelp" class="form-text"> Nunca compartas tu usuario con personas desconocidas.</div>
-    </div>
-    <div class="mb-3">
-      <input type="password" placeholder="Contraseña" class="form-control" id="exampleInputPassword1">
-    </div>
+  </div>
+  <div class="mb-3">
+      <input type="password" placeholder="Contraseña" class="form-control" id="password" [(ngModel)]="password">
+   </div>
   
-    <button type="submit" routerLink="/user" class="btn btn-primary">INGRESAR</button>
-  </form>
+  <button type="submit" (click)="login()" class="btn btn-primary">INGRESAR</button>
+</div>

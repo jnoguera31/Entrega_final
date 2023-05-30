@@ -1,0 +1,18 @@
+
+<div class="main">
+    <div class="columna">
+        <div class="Titulo">
+            <h4>LISTA PROYECTOS</h4>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li  (click)="Onproyectos(Iten)"   *ngFor=" let Iten of proyectosm" class="list-group-item">
+                <a >{{Iten.titulo}}</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="textarea">
+        <textarea name="Edi" id="1" cols="30" [(ngModel)]="items.introduccion" rows="10"></textarea>
+        <button type="button" (click)="Onsave()" class="btn btn-primary">Guardar</button>
+    </div>
+</div>

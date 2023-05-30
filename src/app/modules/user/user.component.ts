@@ -10,7 +10,7 @@ import { Items } from 'src/app/class/items';
 })
 export class UserComponent implements OnInit {
   public proyectos: Proyecto[]=[]
- 
+  public items: Items = new Items
   constructor(
     private ProyectoService: ProyectoService
   ){}
@@ -19,4 +19,8 @@ export class UserComponent implements OnInit {
     
     
   }
+
+  Onproyectos(item: Proyecto){
+    this.items.proyecto = item.id
+}
 }

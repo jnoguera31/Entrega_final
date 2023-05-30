@@ -1,25 +1,33 @@
 {
   "proyecto": [
     {
-      "titulo": "hola",
-      "descripcion": "como ta",
+      "titulo": "El camino",
+      "descripcion": "de la vida",
       "id": 1
     }
   ],
   "comentarios": [],
   "items": [
     {
-      "introduccion": "juan nlse",
+      "introduccion": "El camino",
       "id": 1
-    },
-    {
-      "introduccion": "gordito",
-      "id": 2
-    },
-    {
-      "introduccion": "mañana no hay clase",
-      "id": 3
     }
   ],
-  "user": []
+  "users": [
+    {
+      "id": 1,
+      "username": "juan",
+      "password": "jose"
+    },
+    {
+      "id": 2,
+      "username": "Jose",
+      "password": "5589"
+    },
+    {
+      "id": 3,
+      "username": "Pepe",
+      "password": "pepe123"
+    }
+  ]
 }
