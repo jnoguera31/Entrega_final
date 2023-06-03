@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserRoutingModule } from './user-routing.module';
 import { FormsModule } from '@angular/forms';
+import { RcomentarioComponent } from './rcomentario/rcomentario.component';
 
 
 
@@ -17,6 +18,8 @@ import { FormsModule } from '@angular/forms';
   
   
     
+  
+    RcomentarioComponent
   ],
   imports: [
     CommonModule,

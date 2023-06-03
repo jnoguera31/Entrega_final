@@ -1,15 +1,12 @@
 nav {
   border-bottom: 1px solid #cacaca;
-  display: grid;
-  grid-template-columns: 102px 300px;
-}
-nav .buton {
+  grid-template-columns: 102px;
   display: flex;
 }
-nav .buton .logout {
-  margin-left: 50%;
+nav .boton {
+  margin-left: 80%;
 }
-nav .buton .logout button {
+nav .boton button {
   font-weight: bold;
 }
 

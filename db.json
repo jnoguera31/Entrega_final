@@ -1,19 +1,9 @@
 {
   "proyecto": [
     {
-      "titulo": "El camino",
-      "descripcion": "de la vida",
+      "titulo": "Ejemploparaclase",
+      "descripcion": "Esto es una descripcion",
       "id": 1
-    },
-    {
-      "titulo": "Marilyn no hace caso",
-      "descripcion": "Es una mala esposita",
-      "id": 3
-    },
-    {
-      "titulo": "hola como esta",
-      "descripcion": "mañana si hay clases",
-      "id": 4
     }
   ],
   "comentarios": [],
@@ -42,6 +32,13 @@
       "desarrollo": "adadadadadad",
       "conclusion": "adadadadadad",
       "id": 4
+    },
+    {
+      "proyecto": "1",
+      "introduccion": "Esta es una introduccion",
+      "desarrollo": "este es el desarrollo",
+      "conclusion": "esta es la conclusion",
+      "id": 5
     }
   ],
   "users": [
