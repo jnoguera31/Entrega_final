@@ -11,36 +11,42 @@ import { ProyectoService } from 'src/app/services/proyecto.service';
   styleUrls: ['./main.component.sass']
 })
 export class MainComponent implements OnInit {
-  public proyectosm: Proyecto[]=[]
-  public items: Items = new Items
+  public proyectosm: Proyecto[] = [];
+  public items: Items = new Items();
+ 
+  
   constructor(
-    private ProyectoServices: ProyectoService,
-    private ItemsService : ItemsService,
-    public route: Router
-  ){}
+    
+    private proyectoService: ProyectoService,
+    private itemsService: ItemsService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
-    this.ProyectoServices.loadP().subscribe((res:any)=>{
-      res.forEach((elem:any) => {
-        let temp= new Proyecto()
-        temp.set(elem)
-        this.proyectosm.push(temp)
-        
+    this.proyectoService.loadP().subscribe((res: any) => {
+      res.forEach((elem: any) => {
+        let temp = new Proyecto();
+        temp.set(elem);
+        this.proyectosm.push(temp);
       });
-    })
-    
-    
-    
-  }
-  
-  Onproyectos(item: Proyecto){
-    this.items.proyecto = item.id
+    });
   }
 
-  Onsave(){
-    this.ItemsService.createP(this.items).subscribe(()=>{
-      this.route.navigate(['/home'])
-    })
+  Onproyectos(item: Proyecto) {
+    this.items.proyecto = item.id;
+    this.resetForm();
+  }
+
+  Onsave() {
+    this.itemsService.createItem(this.items).subscribe(() => {
+      this.resetForm();
+      this.router.navigate(['/user']);
+    });
+  }
+
+  resetForm() {
+    this.items.introduccion = '';
+    this.items.desarrollo = '';
+    this.items.conclusion = '';
   }
 }
-

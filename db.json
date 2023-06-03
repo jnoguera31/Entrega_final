@@ -6,9 +6,14 @@
       "id": 1
     },
     {
-      "titulo": "el alma del gato",
-      "descripcion": "gato con botas",
-      "id": 2
+      "titulo": "Marilyn no hace caso",
+      "descripcion": "Es una mala esposita",
+      "id": 3
+    },
+    {
+      "titulo": "hola como esta",
+      "descripcion": "mañana si hay clases",
+      "id": 4
     }
   ],
   "comentarios": [],
@@ -16,6 +21,27 @@
     {
       "introduccion": "El camino",
       "id": 1
+    },
+    {
+      "proyecto": "1",
+      "introduccion": "La historia de pepe",
+      "desarrollo": "el era un niño muy bueno",
+      "conclusion": "Pero no hacia caso",
+      "id": 2
+    },
+    {
+      "proyecto": 1,
+      "introduccion": "cazadadaaaaaaaaaaaa",
+      "desarrollo": "adaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "conclusion": "daaaaaaaaaaaaaaaaaaaaaaa",
+      "id": 3
+    },
+    {
+      "proyecto": "3",
+      "introduccion": "dadadadadad",
+      "desarrollo": "adadadadadad",
+      "conclusion": "adadadadadad",
+      "id": 4
     }
   ],
   "users": [
@@ -33,6 +59,11 @@
       "id": 3,
       "username": "Pepe",
       "password": "pepe123"
+    },
+    {
+      "id": 4,
+      "username": "marilyn",
+      "password": "yadilsa"
     }
   ]
 }

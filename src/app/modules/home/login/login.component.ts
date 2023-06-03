@@ -35,7 +35,7 @@ export class LoginComponent {
         console.log('Credenciales inválidas');
         this.errorMessage = 'Credenciales inválidas';
         this.ngZone.run(() => {
-          window.alert('Credenciales inválidas');
+          window.alert('Usuario o Contraseña Incorrectos');
           this.username = ''; // Dejar en blanco el campo de nombre de usuario
           this.password = ''; // Dejar en blanco el campo de contraseña
         });

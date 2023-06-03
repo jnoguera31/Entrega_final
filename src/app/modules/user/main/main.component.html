@@ -1,18 +1,64 @@
-
 <div class="main">
     <div class="columna">
-        <div class="Titulo">
-            <h4>LISTA PROYECTOS</h4>
+      <div class="Titulo">
+        <h4>LISTA PROYECTOS</h4>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li (click)="Onproyectos(item)" *ngFor="let item of proyectosm" class="list-group-item">
+          <a>{{item.titulo}}</a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="items">
+        <div class="aip">
+            <h3>AGREGAR ITEMS AL PROYECTO</h3>
         </div>
-        <ul class="list-group list-group-flush">
-            <li  (click)="Onproyectos(Iten)"   *ngFor=" let Iten of proyectosm" class="list-group-item">
-                <a >{{Iten.titulo}}</a>
-            </li>
-        </ul>
+        
+      <form (ngSubmit)="Onsave()" #form="ngForm">
+        <div class="sproyectos">
+          <label for="proyecto">Proyectos  </label>
+          <select id="proyecto" name="proyecto" [(ngModel)]="items['proyecto']" required #proyectoInput="ngModel">
+            <option value="">Seleccionar proyecto</option>
+            <option *ngFor="let proyecto of proyectosm" [value]="proyecto.id">{{proyecto.titulo}}</option>
+          </select>
+          <div *ngIf="proyectoInput.invalid && (proyectoInput.dirty || proyectoInput.touched)" class="text-danger">
+            Debes seleccionar un proyecto.
+          </div>
+        </div>
+  
+        <div class="introduccion">
+          <label for="introduccion">Introducción</label>
+          <textarea id="introduccion" name="introduccion" cols="30" rows="10"
+            [(ngModel)]="items['introduccion']" required minlength="10" #introduccionInput="ngModel"
+            [disabled]="form.controls['proyecto'].invalid"></textarea>
+          <div *ngIf="introduccionInput.invalid && (introduccionInput.dirty || introduccionInput.touched)"
+            class="text-danger">
+            La introducción es requerida y debe tener al menos 10 caracteres.
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="desarrollo">Desarrollo</label>
+          <textarea id="desarrollo" name="desarrollo" cols="30" rows="10"
+            [(ngModel)]="items['desarrollo']" required minlength="10" #desarrolloInput="ngModel"
+            [disabled]="form.controls['proyecto'].invalid || introduccionInput.invalid || items['introduccion'].length < 10"></textarea>
+          <div *ngIf="desarrolloInput.invalid && (desarrolloInput.dirty || desarrolloInput.touched)" class="text-danger">
+            El desarrollo es requerido y debe tener al menos 10 caracteres.
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="conclusion">Conclusión</label>
+          <textarea id="conclusion" name="conclusion" cols="30" rows="10"
+            [(ngModel)]="items['conclusion']" required minlength="10" #conclusionInput="ngModel"
+            [disabled]="form.controls['proyecto'].invalid || desarrolloInput.invalid || items['desarrollo'].length < 10"></textarea>
+          <div *ngIf="conclusionInput.invalid && (conclusionInput.dirty || conclusionInput.touched)" class="text-danger">
+            La conclusión es requerida y debe tener al menos 10 caracteres.
+          </div>
+        </div>
+  
+        <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Guardar</button>
+      </form>
     </div>
-
-    <div class="textarea">
-        <textarea name="Edi" id="1" cols="30" [(ngModel)]="items.introduccion" rows="10"></textarea>
-        <button type="button" (click)="Onsave()" class="btn btn-primary">Guardar</button>
-    </div>
-</div>
+  </div>

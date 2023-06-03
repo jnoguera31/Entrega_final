@@ -17,4 +17,9 @@ export class ItemsService {
    loadP(){
     return this.http.get('http://localhost:3000/items');
    }
+
+   createItem(item: Items) {
+    return this.http.post('http://localhost:3000/items', item);
+  }
+   
 }
